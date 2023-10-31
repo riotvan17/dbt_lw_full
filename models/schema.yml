@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: raw_data_circle
+    description: my dataset
+    tables:
+      - name: sales
+        identifier: raw_cc_sales
+        description: sales table RAW
+      - name: raw_cc_stock
+
+models:
+  - name: stg_raw_data_circle__raw_cc_stock
+    description: stocks model
+    tests:
+      - unique:
+          column_name: product_id
